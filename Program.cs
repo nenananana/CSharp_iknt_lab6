@@ -178,7 +178,16 @@ namespace sharp_lab6
                         }
                         f1.SetNewValues(n5, d5);
                         Console.WriteLine($"Новое вещественное значение {f1}: {f1.ToDouble()}");
-
+                        Console.WriteLine("\nВведите новое значение для 1 дроби в формате n/d ");
+                        string dr6 = Console.ReadLine();
+                        TryParseFraction(dr6, out int n6, out int d6);
+                        if ((d6 == 0))
+                        {
+                            Console.WriteLine("Знаменатель не должен быть равен нулю. Проверьте корректность ввода.");
+                            Environment.Exit(0);
+                        }
+                        f1.SetNewValues(n6, d6);
+                        Console.WriteLine($"Новое вещественное значение {f1}: {f1.ToDouble()}");
 
                     }
                     catch
